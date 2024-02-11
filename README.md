@@ -1,6 +1,6 @@
 # Simple (arcade style) airplane controller for Godot (C#)
 
-![screenshot](screenshots/SimpleAirplaneController1.jpg)
+![screenshot](addons/GodotSimpleAirplaneController/screenshots/SimpleAirplaneController1.jpg)
 
 Free to use in your own projects, licensed under MIT.
 

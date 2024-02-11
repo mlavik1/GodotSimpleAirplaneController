@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bixk1s0chk34d"
-path.s3tc="res://.godot/imported/grass.png-ae196cbe22ed48d2c3a578e20bbc1e7d.s3tc.ctex"
+path.s3tc="res://.godot/imported/grass.png-7066d7c5f22bd8b7bdbe0d4d971532b6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Fupi/grass.png"
-dest_files=["res://.godot/imported/grass.png-ae196cbe22ed48d2c3a578e20bbc1e7d.s3tc.ctex"]
+source_file="res://addons/GodotSimpleAirplaneController/assets/Fupi/grass.png"
+dest_files=["res://.godot/imported/grass.png-7066d7c5f22bd8b7bdbe0d4d971532b6.s3tc.ctex"]
 
 [params]
 

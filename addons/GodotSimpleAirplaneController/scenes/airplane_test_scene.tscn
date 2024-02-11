@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://c0qwaigoq4hwr"]
 
-[ext_resource type="PackedScene" uid="uid://b74jwldku566k" path="res://assets/mfonasd/the_simpliest_blender_game_flight_simulator.glb" id="1_fxsrq"]
-[ext_resource type="Script" path="res://scripts/Aircraft.cs" id="1_ujq7q"]
-[ext_resource type="Script" path="res://scripts/PlayerAircraftController.cs" id="2_f82gn"]
-[ext_resource type="Texture2D" uid="uid://bixk1s0chk34d" path="res://assets/Fupi/grass.png" id="3_d25ik"]
-[ext_resource type="Script" path="res://scripts/CameraFollow.cs" id="3_wcm47"]
+[ext_resource type="PackedScene" uid="uid://b74jwldku566k" path="res://addons/GodotSimpleAirplaneController/assets/mfonasd/the_simpliest_blender_game_flight_simulator.glb" id="1_fxsrq"]
+[ext_resource type="Script" path="res://addons/GodotSimpleAirplaneController/scripts/Aircraft.cs" id="1_ujq7q"]
+[ext_resource type="Script" path="res://addons/GodotSimpleAirplaneController/scripts/PlayerAircraftController.cs" id="2_f82gn"]
+[ext_resource type="Texture2D" uid="uid://bixk1s0chk34d" path="res://addons/GodotSimpleAirplaneController/assets/Fupi/grass.png" id="3_d25ik"]
+[ext_resource type="Script" path="res://addons/GodotSimpleAirplaneController/scripts/CameraFollow.cs" id="3_wcm47"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gdu0v"]
 size = Vector3(0.392506, 0.0722809, 0.28418)

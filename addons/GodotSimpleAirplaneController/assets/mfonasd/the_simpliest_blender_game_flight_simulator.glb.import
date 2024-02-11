@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b74jwldku566k"
-path="res://.godot/imported/the_simpliest_blender_game_flight_simulator.glb-04353b63fe55f0d529db9330ced5bc14.scn"
+path="res://.godot/imported/the_simpliest_blender_game_flight_simulator.glb-82c97e62fa70f854b1b1939f60f9babe.scn"
 
 [deps]
 
-source_file="res://assets/mfonasd/the_simpliest_blender_game_flight_simulator.glb"
-dest_files=["res://.godot/imported/the_simpliest_blender_game_flight_simulator.glb-04353b63fe55f0d529db9330ced5bc14.scn"]
+source_file="res://addons/GodotSimpleAirplaneController/assets/mfonasd/the_simpliest_blender_game_flight_simulator.glb"
+dest_files=["res://.godot/imported/the_simpliest_blender_game_flight_simulator.glb-82c97e62fa70f854b1b1939f60f9babe.scn"]
 
 [params]
 
