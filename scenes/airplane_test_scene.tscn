@@ -37,7 +37,7 @@ script = ExtResource("1_ujq7q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00236702, 0.0186081, 0.0649414)
 shape = SubResource("BoxShape3D_gdu0v")
 
-[node name="the_simpliest_blender_game_flight_simulator" parent="Aircraft" instance=ExtResource("1_fxsrq")]
+[node name="Model" parent="Aircraft" instance=ExtResource("1_fxsrq")]
 transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
 
 [node name="CameraAttachTarget" type="Node3D" parent="Aircraft"]
