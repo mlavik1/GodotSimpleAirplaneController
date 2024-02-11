@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=3 uid="uid://c0qwaigoq4hwr"]
+
+[ext_resource type="PackedScene" uid="uid://b74jwldku566k" path="res://assets/mfonasd/the_simpliest_blender_game_flight_simulator.glb" id="1_fxsrq"]
+[ext_resource type="Script" path="res://scripts/Aircraft.cs" id="1_ujq7q"]
+[ext_resource type="Script" path="res://scripts/PlayerAircraftController.cs" id="2_f82gn"]
+[ext_resource type="Texture2D" uid="uid://bixk1s0chk34d" path="res://assets/Fupi/grass.png" id="3_d25ik"]
+[ext_resource type="Script" path="res://scripts/CameraFollow.cs" id="3_wcm47"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gdu0v"]
+size = Vector3(0.392506, 0.0722809, 0.28418)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktstn"]
+albedo_texture = ExtResource("3_d25ik")
+uv1_scale = Vector3(100, 100, 100)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fjjuk"]
+sky_top_color = Color(0.533333, 0.678431, 0.835294, 1)
+sky_horizon_color = Color(0.819608, 0.831373, 0.937255, 1)
+ground_bottom_color = Color(0, 0.376471, 0, 1)
+ground_horizon_color = Color(0, 0.894118, 0, 1)
+
+[sub_resource type="Sky" id="Sky_fdadw"]
+sky_material = SubResource("ProceduralSkyMaterial_fjjuk")
+
+[sub_resource type="Environment" id="Environment_rfgff"]
+background_mode = 2
+background_color = Color(0.380392, 0.572549, 1, 1)
+sky = SubResource("Sky_fdadw")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Aircraft" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0943062, 0)
+script = ExtResource("1_ujq7q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Aircraft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00236702, 0.0186081, 0.0649414)
+shape = SubResource("BoxShape3D_gdu0v")
+
+[node name="the_simpliest_blender_game_flight_simulator" parent="Aircraft" instance=ExtResource("1_fxsrq")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+
+[node name="CameraAttachTarget" type="Node3D" parent="Aircraft"]
+transform = Transform3D(1, 0, 0, 0, 0.976156, 0.21707, 0, -0.21707, 0.976156, 0, 0.167261, 0.473619)
+
+[node name="Terrain" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_ktstn")
+size = Vector3(200, 0.1, 200)
+
+[node name="AirplaneController" type="Node3D" parent="." node_paths=PackedStringArray("aircraft")]
+script = ExtResource("2_f82gn")
+aircraft = NodePath("../Aircraft")
+
+[node name="AirplaneCameraFollow" type="Node3D" parent="." node_paths=PackedStringArray("followTarget")]
+script = ExtResource("3_wcm47")
+followTarget = NodePath("../Aircraft/CameraAttachTarget")
+
+[node name="Camera3D" type="Camera3D" parent="AirplaneCameraFollow"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.333001, 0.942927, 0, -0.942927, 0.333001, 0.270119, 0.893332, -0.0535115)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rfgff")
